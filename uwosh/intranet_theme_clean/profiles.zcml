@@ -1,0 +1,31 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="uwosh.intranet_theme_clean">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="uwosh_intranet_theme_clean"
+      directory="profiles/default"
+      description='Extension profile for the "uwosh_intranet_theme_clean" Plone theme.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="uwosh_intranet_theme_clean uninstall profile"
+      directory="profiles/uninstall"
+      description='Removes the "uwosh_intranet_theme_clean" Plone theme.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      />
+
+  <genericsetup:importStep
+      name="uwosh.intranet_theme_clean.various"
+      title="uwosh_intranet_theme_clean: miscellaneous import steps"
+      description="Various import steps that are not handled by GS import/export handlers."
+      handler="uwosh.intranet_theme_clean.setuphandlers.setupVarious">
+    <depends name="skins"/>
+  </genericsetup:importStep>
+
+</configure>

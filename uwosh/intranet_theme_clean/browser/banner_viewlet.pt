@@ -1,0 +1,116 @@
+<div id="uwosh_banner_body">
+	<div id="uwosh_logo">
+		<a tal:attributes="href python: (hasattr(context, 'uwosh_home_url') and getattr(context, 'uwosh_home_url', 'http://www.uwosh.edu/home')) or 'http://www.uwosh.edu/home'"><img tal:attributes="src string: ${here/portal_url}/logo.png"></a>
+	</div>
+	<div id="audienceNav">
+		<h1><a tal:attributes="href here/portal_url" tal:content="context/@@plone_portal_state/portal_title" href="">[site title]</a></h1>
+		<ul>
+			<tal:actions tal:repeat="action view/audience_navigation">
+        <li tal:attributes="class python: view.selected(action['url']) and action['id'] + 'AudienceNav' + ' selected' or action['id'] + 'AudienceNav'" >
+            <a href=""
+               tal:attributes="href action/url;"
+							 tal:content="action/title"
+            ></a>
+        </li>
+    	</tal:actions>
+		</ul>
+
+<!--Search -->
+<div id="google-searchbox" 
+	 class="uwosh-searchbox"
+	 tal:attributes="style python: (not view.search_campus and 'display:none') or ''">
+	<form 
+		action="uwosh-search" 
+		id="searchbox_016914008736719096284:eascmls-b2u" 
+		class="uwosh-searchbox"
+		tal:attributes="action string:${view/site_url}/uwosh-search"
+		onsubmit="return false;">
+		<div class="LSBox">
+	   		<input class="inputLabelActive" title="Search Campus" type="text" name="q" size="18"/>
+	   		<input class="searchButton" type="submit" value="Search"/>
+			<div class="searchSection">
+				<input id="portal-searchbox-checkbox-campus" class="noborder"
+					type="checkbox" checked="true" name="search_entire_campus" />
+				<label for="portal-searchbox-checkbox-campus" style="cursor: pointer">
+					search entire campus
+				</label>
+			</div>
+	 	</div>
+	</form>
+
+	<script type="text/javascript"
+		src="http://www.google.com/coop/cse/brand?form=searchbox_016914008736719096284%3Aeascmls-b2u&lang=en">
+	</script>
+
+	<div id="results_016914008736719096284:eascmls-b2u" style="display:none">
+	 	<div class="cse-closeResults">
+	   		<a>&times; Close</a>
+	 	</div>
+	 	<div class="cse-resultsContainer"></div>
+	</div>
+
+	<style type="text/css">
+	@import url(http://www.google.com/cse/api/overlay.css);
+	</style>
+
+	<script
+	src="http://www.google.com/uds/api?file=uds.js&v=1.0&key=ABQIAAAA_hxp3RI8qqPYVC9t6pA8shRbJimFOXjwfZ7D6AgkUmNWU0eYjBTgBg715rbnb0xGjGheQwXJTgv0ww&hl=en"
+	type="text/javascript"></script>
+	<script src="http://www.google.com/cse/api/overlay.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+	function OnLoad() {
+	 	new CSEOverlay("016914008736719096284:eascmls-b2u",
+				document.getElementById("searchbox_016914008736719096284:eascmls-b2u"),
+				document.getElementById("results_016914008736719096284:eascmls-b2u")
+		);
+	}
+	GSearch.setOnLoadCallback(OnLoad);
+	</script>
+
+</div>
+	<div 
+		id="portal-searchbox" 
+		class="uwosh-searchbox" 
+		tal:attributes="style python: (view.search_campus and 'display:none') or ''"
+		i18n:domain="plone">
+		
+		<form name="searchform"
+			id="searchbox_016914008736719096284:eascmls-b2u"
+			action="uwosh-search"
+			tal:attributes="action string:${view/site_url}/uwosh-search">
+
+			<label for="searchGadget" class="hiddenStructure" i18n:translate="text_search">
+				Search Site
+			</label>
+
+			<div class="LSBox">
+				<input 
+					name="SearchableText" type="text" size="18" value="" title="Search Site"
+					accesskey="4" i18n:attributes="title title_search_site;"
+					tal:attributes="value request/SearchableText|nothing;
+									id view/search_input_id"
+					class="inputLabel" 
+				/>
+
+				<input class="searchButton" type="submit" value="Search" i18n:attributes="value label_search;" />
+				<div class="searchSection">
+					<input id="portal-searchbox-checkbox-site" class="noborder"
+						type="checkbox" name="search_entire_campus" />
+					<label for="portal-searchbox-checkbox-site" style="cursor: pointer">
+						search entire campus
+					</label>
+				</div>
+				<div class="LSResult" id="LSResult" style="">
+					<div class="LSShadow" id="LSShadow">
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+		
+</div>
+
+<!-- END Search -->
+
+</div>

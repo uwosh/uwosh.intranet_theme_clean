@@ -1,0 +1,6 @@
+<div id="collegeViewlet">
+  <a tal:attributes="href here/portal_url">
+    <h1 tal:content="here/organization_type|nothing" id="organizationType"></h1>
+    <h1 id="organization" tal:content="view/title" />
+  </a>
+</div>

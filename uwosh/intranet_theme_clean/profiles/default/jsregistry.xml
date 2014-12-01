@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!-- This file holds the setup configuration for the portal_javascripts tool.
+     -->
+
+<object name="portal_javascripts">
+
+ <!-- Javascript files that will be registered with the
+      portal_javascripts tool are defined here. You can also specify values
+      for existing resources if you need to modify some of their properties.
+      Javascript elements accept these parameters:
+      - 'id' (required): same rules as for stylesheets (see
+        'cssregistry.xml').
+      - 'expression' (optional - default: ''): a tal condition.
+      - 'inline' (optional - default: False)
+      - 'enabled' (optional - default: True): boolean
+      - 'cookable' (optional - default: True): boolean (aka 'merging allowed')
+      See registerScript() arguments in ResourceRegistries/tools/JSRegistry.py
+      for the latest list of all available keys and default values.
+      -->
+<!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
+ <javascript
+    id="++resource++uwosh.intranet_theme.javascripts/something.js"
+    cacheable="False" compression="safe" cookable="False"
+    enabled="True" expression=""  inline="False"/>
+-->
+
+ 	<javascript 
+		cacheable="True" compression="none" cookable="True"
+    	enabled="True" expression="python:'MSIE 6' in here.REQUEST['HTTP_USER_AGENT']" 
+		id="++resource++uwosh.themebase.pngie6fix.js" inline="False"
+	/>
+ 	<javascript 
+		cacheable="True" compression="none" cookable="True"
+    	enabled="True"
+		id="uwosh.js" inline="False"
+	/>
+	
+ <!-- change this to only use if the user is logged in... saves 40k on download -->
+ 	<javascript cacheable="True" compression="none" cookable="True"
+    	enabled="True" expression="python: not here.restrictedTraverse('@@plone_portal_state').anonymous()" 
+		id="++resource++base2-dom-fp.js" inline="False"
+	/>
+</object>

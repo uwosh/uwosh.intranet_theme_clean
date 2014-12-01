@@ -1,0 +1,575 @@
+
+*=========================
+       CONTAINERS
+==========================*/
+div.width-full {
+width:100%;
+}
+
+div.position-0 {
+margin-left:-100%;
+}
+/*=========================
+       GENERAL
+==========================*/
+body {
+background-image:url("background.jpg");
+background-repeat:no-repeat;
+background-color:#d69a28;
+background-position:center top
+}
+
+#visual-portal-wrapper {
+min-width:1024px;
+width:auto;
+margin:10px 40px;
+background-color:white;
+display:inline;
+float:left;
+
+}
+
+/*=========================
+       TOP LEVEL NAV
+==========================*/
+#top_level_navigation {
+background: rgb(76,76,76); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(44,44,44,1) 50%, rgba(17,17,17,1) 60%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(76,76,76,1)), color-stop(12%,rgba(89,89,89,1)), color-stop(50%,rgba(44,44,44,1)), color-stop(60%,rgba(17,17,17,1)), color-stop(91%,rgba(28,28,28,1)), color-stop(100%,rgba(19,19,19,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(44,44,44,1) 50%,rgba(17,17,17,1) 60%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(44,44,44,1) 50%,rgba(17,17,17,1) 60%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(44,44,44,1) 50%,rgba(17,17,17,1) 60%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* IE10+ */
+background: linear-gradient(top,  rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(44,44,44,1) 50%,rgba(17,17,17,1) 60%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+padding:5px 5px 10px 5px;
+
+
+}
+
+#top_level_navigation a {
+color:white;
+font-size:.75em;
+border-right:solid 1px white;
+padding:0px 10px;
+}
+
+/*=========================
+       PERSONAL TOOLBAR
+==========================*/
+#portal-personaltools-wrapper {
+position:absolute;
+top:0px;
+z-index:30;
+right:10px
+}
+
+
+/*=========================
+       UWOTopLinks
+==========================*/
+dl#uwoshtoplinkswrapper {
+text-align:left;
+background-color:#13387b;
+width:100%;
+margin:0px;
+padding:5px 0px;
+
+}
+
+dl#uwoshtoplinkswrapper dl#uwoshtoplinks {
+float:left;
+}
+
+dl#uwoshtoplinkswrapper  dl#uwoshtoplinks dt {
+background-color:transparent;
+}
+
+dt#uwoshtoplinks  a {
+color:white;
+padding:0px 0px 3px 15px;
+margin:0px 10px 0px 5px;
+font-family:Arial!important;
+font-size:.7em;
+float:left;
+}
+
+a#uwoshtoplink-TitanWeb {
+background-image:url(icons/titanWebIcon.png);
+background-repeat:no-repeat;
+}
+
+a#uwoshtoplink-EmployeePortal {
+background-image:url(icons/uwsysPortalIcon.png);
+background-repeat:no-repeat;
+}
+
+a#uwoshtoplink-SiteIndex {
+background-image:url(icons/indexIcon.png);
+background-repeat:no-repeat;
+}
+
+a#uwoshtoplink-TitanMail {
+background-image:url(icons/mailIcon.png);
+background-repeat:no-repeat;
+padding-left:22px!important;
+}
+
+a#uwoshtoplink-Directory {
+background-image:url(icons/uwoIndex.png);
+background-repeat:no-repeat;
+padding-left:20px!important;
+}
+
+a#uwoshtoplink-TitanFiles {
+background-image:url(icons/titanFilesIcon.png);
+background-repeat:no-repeat;
+
+}
+
+a#uwoshtoplink-D2L {
+background-image:url(icons/d2lIcon.png);
+background-repeat:no-repeat;
+padding-left:29px!important;
+}
+
+a#uwoshtoplink-Library {
+background-image:url(icons/polkIcon.png);
+background-repeat:no-repeat;
+padding-left:17px!important;
+}
+
+a#uwoshtoplink-MyUWO {
+background-image:url(icons/myuwoIcon.png);
+background-repeat:no-repeat;
+}
+
+a#uwoshtoplink-StudentClubsAndOrgs {
+background-image:url(icons/clubsIcon.png);
+background-repeat:no-repeat;
+}
+
+a#uwoshtoplink-TitanJobs {
+background-image:url(icons/jobsIcon.png);
+background-repeat:no-repeat;
+}
+
+/*=========================
+       HEADER
+==========================*/
+
+#portal-header {
+}
+
+#logo {
+margin-top:30px;
+}
+
+#portal-logo {
+padding:0px;
+margin:15px;
+}
+
+
+#portal-logo img {
+margin-top:0px;
+}
+
+#siteName {
+position:absolute;
+left:200px;
+top:20px;
+z-index:200;
+font-weight:normal;
+
+}
+
+
+
+/*=========================
+       SEARCH
+==========================*/
+
+.LSBox {
+margin-right:15px;}
+
+.LSBox .searchButton {
+background-image: linear-gradient(bottom, rgb(80,80,88) 22%, rgb(91,91,101) 61%, rgb(36,36,39) 81%);
+background-image: -o-linear-gradient(bottom, rgb(80,80,88) 22%, rgb(91,91,101) 61%, rgb(36,36,39) 81%);
+background-image: -moz-linear-gradient(bottom, rgb(80,80,88) 22%, rgb(91,91,101) 61%, rgb(36,36,39) 81%);
+background-image: -webkit-linear-gradient(bottom, rgb(80,80,88) 22%, rgb(91,91,101) 61%, rgb(36,36,39) 81%);
+background-image: -ms-linear-gradient(bottom, rgb(80,80,88) 22%, rgb(91,91,101) 61%, rgb(36,36,39) 81%);
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+color:white;
+padding:3px 20px;
+border-style:none;
+
+}
+
+#LSResult {
+z-index:30;
+}
+
+
+
+/*=========================
+       TABS
+==========================*/
+#portal-globalnav {
+font-size:.8em;
+text-transform:lowercase;
+}
+
+#portal-globalnav, #portal-globalnav li a{
+background: rgb(97,104,112); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(97,104,112,1) 0%, rgba(43,49,54,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(97,104,112,1)), color-stop(100%,rgba(43,49,54,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(97,104,112,1) 0%,rgba(43,49,54,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(97,104,112,1) 0%,rgba(43,49,54,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(97,104,112,1) 0%,rgba(43,49,54,1) 100%); /* IE10+ */
+background: linear-gradient(top, rgba(97,104,112,1) 0%,rgba(43,49,54,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#616870', endColorstr='#2b3136',GradientType=0 ); /* IE6-9 */
+color:white;
+}
+
+#portal-globalnav .selected a {
+background-color:#7f8891;
+}
+
+#portal-globalnav li a{
+padding-bottom:10px!important;
+border:none;
+margin:0px;
+min-width:3em;
+}
+
+
+#portal-globalnav ul.submenu li a{
+background-color:#2b3136!important;
+color:white!important;
+background-image:none!important;
+padding-left:20px!important;
+
+}
+
+#portal-globalnav li#portaltab-for_faculty a {
+background-image:URL(arrowTrans.png);
+background-repeat:no-repeat;
+background-position:left;
+padding-left:30px;
+}
+
+#portaltab-for_faculty.plain, #portaltab-for_staff .plain, #portaltab-for_students .plain, #portaltab-Groups .plain {
+background: rgb(138,138,138); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(138,138,138,1) 0%, rgba(96,96,96,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(138,138,138,1)), color-stop(100%,rgba(96,96,96,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(138,138,138,1) 0%,rgba(96,96,96,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(138,138,138,1) 0%,rgba(96,96,96,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(138,138,138,1) 0%,rgba(96,96,96,1) 100%); /* IE10+ */
+background: linear-gradient(top, rgba(138,138,138,1) 0%,rgba(96,96,96,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a8a8a', endColorstr='#606060',GradientType=0 ); /* IE6-9 */
+}
+
+#portaltab-RESOURCES_FOR_LABEL.plain a{
+background-image:URL(dots.png);
+background-repeat:no-repeat;
+background-position:3px 
+
+}
+
+/*=========================
+       PORTLETS
+==========================*/
+.portletWrapper dl.portletRecent dd {
+padding:3px;
+}
+
+
+
+/*=========================
+       MAINPAGE SEARCH
+==========================*/
+
+#mainPageSearchForm h1.documentFirstHeading {
+color:#1a2e58;
+}
+
+#mainPageSearchForm .formHelp {
+display:none;
+}
+
+#mainPageSearchForm label {
+display:none;
+}
+
+#mainPageSearchForm input#SearchableText {
+width:400px;
+}
+
+#mainPageSearchForm input#SearchableText{
+float:left;
+margin-right:10px;
+}
+
+#mainPageSearchForm input.context {
+height:27px;
+background-color:#2c2c32;
+color:white;
+padding:5px 10px;
+font-weight:bold;
+border:none!important
+
+}
+
+
+/* fix problem with personaltools being hidden by portal_tabs, maybe caused by webcouturier.dropdownmenu */
+
+
+dl #portal-personaltools {
+    z-index:20!important;
+}
+
+#portal-globalnav {
+    z-index:21!important;
+}
+
+ul .submenu {
+    z-index:22!important;
+}
+
+/* for custom front search page */
+
+div input#SearchableText {
+    width: 100%;
+}
+
+.field input[type="text"] {
+    font: 17px arial, sans-serif;
+}
+
+/*=========================
+       NAVIGATION TREE
+==========================*/
+
+ul.navTree.navTreeLevel0 a{
+padding:0px!important;
+}
+
+ul.navTree li:nth-child() {
+margin-left:0px!important;
+padding-left:0px!important;
+}
+
+ul.navTree li{
+margin:0px 0px 0px 0px;
+}
+
+ul.navTree li a{
+background-image:none!important;
+margin-top:0px!important;
+margin-bottom:5px!important;
+line-height:1.3em!important;
+}
+
+ul.navTree.navTreeLevel0 li.navTreeItem a {
+}
+
+ul.navTree .navTreeCurrentNode {
+
+}
+
+ul.navTree a.navTreeCurrentNode.contenttype-document{
+padding-left:0px!important;
+margin-left:0px!important;
+border:none!important;
+background-color:transparent;
+}
+
+ul.navTree a.navTreeCurrentItem {
+padding-left:0px!important;
+margin-left:0px!important;
+font-weight:bold;
+ }
+
+ul.navTree a.navTreeCurrentItem  {
+padding-left:0px!important;
+margin-left:0px!important;
+}
+
+ul.navTree li li{
+margin-left:10px;
+}
+
+ul.navTree li  {
+line-height:.9em!important;
+}
+
+ul.navTree a {
+border-bottom:dotted 1px !important;
+}
+
+ul.navTree a.contenttype-file img{
+display:none;
+}
+
+ul.navTree a.contenttype-file:after {
+content:"(file)";
+font-size:.9em;
+}
+
+
+/*=========================
+       RESOURCE
+==========================*/
+
+
+
+.section-custom-front-page #resourcesDashboard {
+width:200px;
+float:left;
+padding:10px;
+text-align:center;
+color:#b4b3b3;
+border-right:solid 1px grey;
+margin-right:20px;
+
+}
+
+
+.section-custom-front-page #resourcesDashboard a {
+color:#5a8ebb}
+
+
+.section-custom-front-page #parent-fieldname-text {
+padding: 20px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+margin: 10px;
+width: 510px!important;
+//background-image:url("resourcesBackground.jpg");
+background-position:bottom;
+background-repeat:repeat-x;
+//background-color:black;
+float:left;
+color:grey;
+font-weight:bold;
+}
+
+.section-custom-front-page #resourcesResource {
+color:#b4b3b3}
+
+.section-custom-front-page #resourcesResource a{
+padding:20px;
+color:#5a8ebb
+}
+
+
+
+div #parent-fieldname-text {
+padding: 20px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+margin: 10px;
+}
+
+
+/*=========================
+       CALLOUTS
+==========================*/
+
+html body #content .pullquote{
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+font-weight:normal!important;
+background: rgb(63,76,107)!important; /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(63,76,107,1) 0%, rgba(30,47,51,1) 100%)!important; /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(63,76,107,1)), color-stop(100%,rgba(30,47,51,1)))!important; /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(63,76,107,1) 0%,rgba(30,47,51,1) 100%)!important; /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(63,76,107,1) 0%,rgba(30,47,51,1) 100%)!important; /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(63,76,107,1) 0%,rgba(30,47,51,1) 100%)!important; /* IE10+ */
+background: linear-gradient(top,  rgba(63,76,107,1) 0%,rgba(30,47,51,1) 100%)!important; /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4c6b', endColorstr='#1e2f33',GradientType=0 )!important; /* IE6-9 */
+border-left:solid 20px #c7d127!important;
+color:white!important;
+letter-spacing:0px;
+line-height:normal;
+padding:10px;
+}
+
+html body #content .pullquote a:hover {
+color:#75AD0A!important;
+}
+
+
+html body #content .pullquote a {
+color:white!important;
+border-bottom:none!important;
+letter-spacing:0px;
+font-size:.8em;
+line-height:normal;
+
+}
+
+html body #content .pullquote .callout {
+background-color:transparent;
+border:0px;
+}
+
+html body #content .pullquote .callout a {
+text-decoration:none;
+border:none;
+color:white;
+}
+
+/*=========================
+       FOOTER
+==========================*/
+#uwoshFooter {
+	float:left;
+	width:1024px;
+	padding-bottom:20px;
+font-size:.75em;
+padding:20px;
+}
+
+.footerMap {
+	float:left;
+	width:130px;
+	margin:0px;
+
+}
+.footerMap li {
+	list-style-type:none;
+	margin:1px;
+white-space:nowrap;
+
+
+}
+.footerMap li a {
+	text-decoration:none;
+	color:#666666;
+}
+
+#resources table {
+	text-align:center;
+	width:300px;
+	margin-right:10px;
+	float:right;
+}
+#resources img {
+	padding-bottom:5px;
+}
+
+.footMapColumn1,.footMapColumn2 {
+margin-right:10px;
+
+
+}
+
+.footerMap .small-textMap, .footerMap .normal-textMap, .footerMap .large-textMap {
+	display:none;
+}

@@ -1,0 +1,40 @@
+<div id="uwoshFooter" i18n:domain="plone">
+
+	<tal:sets tal:repeat="links view/link_sets">
+	<ul tal:attributes="class string:footerMap footMapColumn${repeat/links/number}">
+		<tal:links tal:repeat="link links">
+		
+		<li tal:attributes="class python: link['id'] + 'Map'">
+			<a tal:attributes="href link/url" tal:content="link/title" />
+		</li>
+		</tal:links>
+	</ul>
+	</tal:sets>
+
+	<div id="resources">
+		<table>
+			<tr>
+				<td>
+					<a href="http://www.ncahlc.org/" target="_blank">
+						<img tal:attributes="src string:${here/portal_url}/higher-learning-commission.jpg" alt="Higher Learning Commission" />
+					</a>
+				</td>
+				<td>
+					<a href="http://www.uwosh.edu/chancellor/systemofaccountability/" target="_blank">
+						<img tal:attributes="src string:${here/portal_url}/collegePortrait.gif" alt="College Portrait" />
+					</a>
+				</td>
+				<td>
+					<a href="http://www.wisconsin.edu/" target="_blank">
+						<img tal:attributes="src string:${here/portal_url}/uwSystem.gif" alt="University of Wisconsin System" />
+					</a>
+				</td>
+				<td>
+					<a href="http://www.uwosh.edu/" target="_blank">
+						<img tal:attributes="src string:${here/portal_url}/uwoLogo.gif" alt="University of Wisconsin Oshkosh" />
+					</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

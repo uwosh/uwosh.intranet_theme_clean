@@ -1,0 +1,16 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="uwosh.intranet_theme">
+
+<!-- We need to include the package of the portlets we are customising -->
+    <include package="plone.app.portlets" />
+
+    <plone:portletRenderer
+        portlet="plone.app.portlets.portlets.recent.IRecentPortlet"
+        layer=".browser.interfaces.IThemeSpecific"
+        template="recent.pt"
+        />
+
+</configure>

@@ -1,0 +1,138 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="uwosh.intranet_theme">
+
+  <!-- 'uwosh_intranet_theme_clean' Zope 3 browser layer
+    Register views, viewlets and resources for this layer to make sure
+    they only apply to the 'uwosh_intranet_theme_clean' theme.
+    You can also use this layer to override default Plone browser views
+    and viewlets only within the 'uwosh_intranet_theme_clean' theme.
+  -->
+
+  <interface
+      interface=".interfaces.IThemeSpecific"
+      type="zope.publisher.interfaces.browser.IBrowserSkinType"
+      name="uwosh.themecollege"
+      />
+
+  <interface
+      interface=".interfaces.IThemeSpecific"
+      type="zope.publisher.interfaces.browser.IBrowserSkinType"
+      name="uwosh_intranet_theme_clean"
+      />
+
+  <!-- Viewlets registration -->
+  <browser:viewlet
+      name="uwosh.toplinksviewlet"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+      class=".viewlets.UWOshTopLinksViewlet"
+      layer=".interfaces.IThemeSpecific"
+      permission="zope2.View"
+      />
+
+	<browser:viewlet
+		name="uwosh.themebase.toplevelnav"
+		manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+	        layer=".interfaces.IThemeSpecific"
+		class=".toplevelnav.TopLevelNav"
+		permission="zope2.View"
+		insert-before="*"
+	/>
+
+  <browser:viewlet
+      name="uwosh.toplinksviewlet"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".viewlets.UWOshTopLinksViewlet"
+      layer=".interfaces.IThemeSpecific"
+      permission="zope2.View"
+      />
+
+<!--
+  	<browser:viewlet
+  		name="uwosh.themecollege.sitetitle"
+  		manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+  		layer=".interfaces.IThemeSpecific"
+  		class=".viewlets.SiteTitle"
+                insert-after="plone.logo"
+  		permission="zope2.View" />
+-->
+
+	<browser:viewlet
+		name="uwosh.themebase.banner"
+		manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+		class=".banner.Banner"
+		layer=".interfaces.IThemeSpecific"
+                insert-after="plone.logo"
+		permission="zope2.View" />
+
+  <!-- customize the logo to include site title -->
+  <browser:viewlet
+      name="plone.logo"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      template="../skins/uwosh_intranet_theme_clean_custom_templates/intranet_logo.pt"
+      layer=".interfaces.IThemeSpecific"
+      class="plone.app.layout.viewlets.common.LogoViewlet"
+      permission="zope2.View"
+      />
+
+
+
+  <!-- Zope 3 browser resources -->
+
+  <!-- Resource directory for images
+    See uwosh/intranet_theme/browser/images/README.txt
+    for more information about registering images as Zope 3 browser
+    resources.
+  -->
+  <browser:resourceDirectory
+      name="uwosh.intranet_theme.images"
+      directory="images"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+  <!-- Resource directory for stylesheets
+    See uwosh/intranet_theme/browser/stylesheets/README.txt
+    for more information about registering stylesheets as Zope 3 browser
+    resources.
+  -->
+
+<!--
+  <browser:resourceDirectory
+      name="uwosh.intranet_theme.stylesheets"
+      directory="stylesheets"
+      layer=".interfaces.IThemeSpecific"
+      />
+-->
+
+<!-- We need to include the package of the portlets we are customising -->
+    <include package="plone.app.portlets" />
+
+    <plone:portletRenderer
+        portlet="plone.app.portlets.portlets.recent.IRecentPortlet"
+        layer=".interfaces.IThemeSpecific"
+        template="recent.pt"
+        />
+
+	<browser:viewlet
+		name="uwosh.themebase.footer"
+		manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+		class=".footer.Footer"
+        	layer=".interfaces.IThemeSpecific"
+		permission="zope2.View" />
+
+	<browser:page
+	  	for="*"
+	  	name="uwosh-search"
+	  	class=".uwoshsearch.UWOshSearch"
+		permission="zope2.View"
+		layer=".interfaces.IThemeSpecific"
+	  />
+
+	<browser:resource
+		file="pngie6fix.js"
+		name="uwosh.themebase.pngie6fix.js"
+		layer=".interfaces.IThemeSpecific"
+	/>
+</configure>
